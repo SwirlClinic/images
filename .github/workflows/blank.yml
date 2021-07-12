@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ source ]
+    branches: [ source, master ]
   pull_request:
-    branches: [ source ]
+    branches: [ source, master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,7 +44,7 @@ jobs:
           # List of metadata for an image
           labels: # optional
           # Load is a shorthand for --output=type=docker
-          load: true
+          load: false
           # Set the networking mode for the RUN instructions during build
           network: # optional
           # Do not use cache when building the image
@@ -56,7 +56,7 @@ jobs:
           # Always attempt to pull a newer version of the image
           pull: # optional, default is false
           # Push is a shorthand for --output=type=registry
-          push: etrang / sourcegg
+          push: true
           # List of secrets to expose to the build (eg. key=string, GIT_AUTH_TOKEN=mytoken)
           secrets: # optional
           # List of secret files to expose to the build (eg. key=filename, MY_SECRET=./secret.txt)
