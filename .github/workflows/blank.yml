@@ -54,7 +54,7 @@ jobs:
           # List of target platforms for build
           platforms: # optional
           # Always attempt to pull a newer version of the image
-          pull: # optional, default is false
+          pull: false
           # Push is a shorthand for --output=type=registry
           push: true
           # List of secrets to expose to the build (eg. key=string, GIT_AUTH_TOKEN=mytoken)
