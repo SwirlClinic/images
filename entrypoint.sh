@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /home/container
 sleep 1
-# Make internal Docker IP address available to processes.
+# Make internal Docker IP address available to processes. x
 export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'`
 
 # Update Source Server
